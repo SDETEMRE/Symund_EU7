@@ -16,12 +16,28 @@ public class LoginPage extends BasePage {
     @FindBy(id = "submit-form")
     public WebElement submit;
 
+    @FindBy(css = ".warning.wrongPasswordMsg")
+    public WebElement wrongUserOrPaswd;
 
-    public void login(String userNameStr, String passwordStr) {
-        userName.sendKeys(userNameStr);
+    @FindBy(css = ".toggle-password")
+    public WebElement eyeBtn;
+
+    @FindBy(xpath = "//a[@id='lost-password']")
+    public WebElement forgotPasswLink;
+
+    @FindBy(id = "reset-password-submit")
+    public WebElement resetButton;
+
+
+    public void login(String usernameStr, String passwordStr) {
+        userName.sendKeys(usernameStr);
         password.sendKeys(passwordStr);
         submit.click();
 
+    }
+    public void enterCredentialsOnly(String user, String Passw){
+        userName.sendKeys(user);
+        password.sendKeys(Passw);
     }
 
 }

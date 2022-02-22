@@ -16,7 +16,7 @@ public class LogoutStepDefs {
 
     @Given("the user logged in with username {string} and password {string}")
     public void theUserLoggedInWithUsernameAndPassword(String username, String password) {
-        loginPage.login(username,password);
+        loginPage.login(username, password);
     }
 
     @Given("the user clicks on avatar button")

@@ -4,8 +4,6 @@ Feature: Default
 	Background:
 
 		Given the user logged in with username "Employee41" and password "Employee123"
-
-
 	#*1-User can log out and ends up in login page*
 	#2-User can not go to home page again by clicking step back button after successfully logged out.
 	@SYMU-979
@@ -13,7 +11,6 @@ Feature: Default
 		Given the user clicks on avatar button
 		And the user clicks on logout button
 		Then the user logged out and returns the login page	
-
 	#1-User can log out and ends up in login page
 	#*2-User can not go to home page again by clicking step back button after successfully logged out.*
 	@SYMU-980
